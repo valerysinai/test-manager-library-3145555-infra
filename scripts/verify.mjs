@@ -1,0 +1,68 @@
+import {spawnSync} from 'node:child_process';
+import {randomBytes} from 'node:crypto';
+import {readFileSync} from 'node:fs';
+import {request} from 'node:https';
+import {resolve} from 'node:path';
+import assert from 'node:assert/strict';
+import {parseEnv} from 'node:util';
+
+const values=parseEnv(readFileSync('.env','utf8'));
+const env={...values,...process.env,TEST_PASSWORD:process.env.TEST_PASSWORD||randomBytes(24).toString('hex')};
+const project='library-check-'+Date.now()+'-'+randomBytes(4).toString('hex');
+env.IMAGE_TAG=project;
+const compose=['compose','--project-name',project];
+let stage='startup';let started=false;
+function docker(args,extra={}){
+  const result=spawnSync('docker',args,{env,encoding:'utf8',timeout:1200000,maxBuffer:16*1024*1024,...extra});
+  if(result.status!==0){
+    const safe=(result.stdout||'').split('\n').filter(l=>l.startsWith('Integrated browser check')||l.startsWith('::error::')||/^::notice::Report (HTTP status|row count): [0-9]+$/.test(l));
+    for(const line of safe)console.log(line);
+    console.log('::error::Docker command failed with exit status: '+String(result.status));
+    throw new Error();
+  }
+  return result.stdout;
+}
+const base='https://localhost:'+(env.HTTPS_PORT||8443);
+const ca=readFileSync(resolve(env.TLS_DIR||'.local/tls','root-ca.pem'));
+function http(path,body,token,trust=true){return new Promise((ok,fail)=>{
+  const bytes=body===undefined?undefined:JSON.stringify(body);
+  const headers={Accept:'application/json',...(bytes?{'Content-Type':'application/json'}:{}),...(token?{Authorization:'Bearer '+token}:{})};
+  const req=request(base+path,{method:bytes?'POST':'GET',headers,...(trust?{ca}:{}),agent:false,rejectUnauthorized:true,timeout:15000},res=>{const chunks=[];res.on('data',b=>chunks.push(b));res.on('end',()=>ok({status:res.statusCode,bytes:Buffer.concat(chunks),type:res.headers['content-type']||''}));});
+  req.on('error',()=>fail(new Error()));req.on('timeout',()=>req.destroy(new Error()));if(bytes)req.write(bytes);req.end();
+});}
+async function login(){const response=await http('/api/v1/auth/login',{username:env.ADMIN_USERNAME,password:env.ADMIN_PASSWORD});assert.equal(response.status,200);return JSON.parse(response.bytes).access_token;}
+function sql(statement){return docker([...compose,'exec','-T','db','psql','-v','ON_ERROR_STOP=1','-U',env.DB_USERNAME||'library','-d',env.DB_DATABASE||'library','-tAc',statement]).trim();}
+try {
+  console.log('Verifying isolated deployment project: '+project);
+  stage='empty-database';started=true;docker([...compose,'up','-d','--wait','db']);
+  assert.equal(sql("SELECT count(*) FROM information_schema.tables WHERE table_schema NOT IN ('pg_catalog','information_schema')"),'0');
+  console.log('Empty PostgreSQL verified before invoking API migrations.');
+  stage='build-images';docker([...compose,'build']);
+  stage='compose-startup';docker([...compose,'up','-d','--wait','--wait-timeout','180']);
+  assert.equal(sql("SELECT count(*) FROM information_schema.tables WHERE table_schema='library'"),'6');
+  assert.equal(sql('SELECT count(*) FROM library.category'),'5');
+  stage='trusted-tls';await assert.rejects(http('/api/v1/health',undefined,undefined,false));
+  assert.equal((await http('/api/v1/health')).status,200);const token=await login();assert.equal((await http('/api/v1/categories',undefined,token)).status,200);
+  assert.equal((await http('/')).status,200);
+  stage='integrated-browser';
+  const output=docker(['compose','--project-name',project,'-f','compose.yaml','-f','compose.test.yaml','--profile','verify','run','--build','--rm','--no-deps','browser']);
+  for(const line of output.split('\n').filter(l=>l.startsWith('Integrated browser check')||/^::notice::Report (HTTP status|row count): [0-9]+$/.test(l)))console.log(line);
+  const state=JSON.parse(readFileSync('artifacts/persistence.json','utf8'));
+  stage='persistent-stop';docker([...compose,'down']);
+  stage='persistent-start';docker([...compose,'up','-d','--wait','--wait-timeout','180']);
+  stage='persisted-login';
+  const refreshed=await login();
+  stage='persisted-book';
+  const book=await http('/api/v1/books/'+state.book_id,undefined,refreshed);assert.equal(book.status,200);assert.equal(JSON.parse(book.bytes).available_copies,2);
+  stage='persisted-cover';
+  const cover=await http('/api/v1/books/'+state.book_id+'/cover',undefined,refreshed);assert.equal(cover.status,200);assert.equal(cover.bytes.toString('base64'),state.cover);
+  stage='persisted-loan';
+  const loan=await http('/api/v1/loans/'+state.loan_id,undefined,refreshed);assert.equal(JSON.parse(loan.bytes).status,'closed');
+  console.log('Database records and private cover persisted across container recreation; fresh admin login succeeded.');
+  console.log('Integrated deployment verification passed.');
+} catch {
+  console.error('::error::Deployment verification failed at stage: '+stage);process.exitCode=1;
+} finally {
+  // The project is generated by this invocation. Never remove the user deployment/volumes.
+  if(started){const cleanup=spawnSync('docker',[...compose,'down','--volumes','--remove-orphans'],{env,stdio:'ignore',timeout:120000});if(cleanup.status!==0){console.error('Isolated test cleanup failed for '+project);process.exitCode=1;}}
+}

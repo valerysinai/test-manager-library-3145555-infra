@@ -1,0 +1,19 @@
+services:
+  browser:
+    profiles: [verify]
+    build:
+      context: .
+      dockerfile: tests/Dockerfile
+    environment:
+      ADMIN_USERNAME: ${ADMIN_USERNAME}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD}
+      TEST_PASSWORD: ${TEST_PASSWORD:?Test credentials required only for verification}
+    volumes:
+      - ${TLS_DIR:-./.local/tls}/root-ca.pem:/trust/root-ca.pem:ro
+      - ./artifacts:/work/artifacts
+    networks: [edge]
+    init: true
+    shm_size: 1gb
+    depends_on:
+      gateway:
+        condition: service_healthy

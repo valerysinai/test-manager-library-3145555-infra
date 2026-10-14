@@ -1,0 +1,65 @@
+name: Integrated deployment
+on:
+  push:
+    branches: [main, 'feature/**']
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  integration:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      API_CONTEXT: _sources/api
+      APP_CONTEXT: _sources/app
+      IMAGE_TAG: ci
+      PUBLIC_ORIGIN: https://gateway
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Read pinned API source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: valerysinai/test-manager-library-3145555-api
+          ref: 590a012d533bdaec1df10ea41bdc600b58860d55
+          path: _sources/api
+          persist-credentials: false
+      - name: Read pinned React source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: valerysinai/test-manager-library-3145555-app
+          ref: 47a517d0ebce8526d96e650d1ac9750338dcc8a4
+          path: _sources/app
+          persist-credentials: false
+      - name: Generate disposable configuration and local CA
+        shell: bash
+        run: |
+          node scripts/init-local.mjs
+          node --input-type=module - <<'JS'
+          import {readFileSync,appendFileSync} from 'node:fs';
+          import {randomBytes} from 'node:crypto';
+          for(const line of readFileSync('.env','utf8').split('\n')){
+            if(/^(DB_PASSWORD|JWT_SECRET|ADMIN_PASSWORD)=/.test(line))console.log('::add-mask::'+line.slice(line.indexOf('=')+1));
+          }
+          const value=randomBytes(24).toString('hex');
+          console.log('::add-mask::'+value);
+          appendFileSync(process.env.GITHUB_ENV,'TEST_PASSWORD='+value+'\n');
+          JS
+      - name: Verify ownership and configuration without expanded secrets
+        run: |
+          docker compose config --quiet
+          node scripts/check-config.mjs
+          python3 -m unittest discover -s scripts -p test_check_secrets.py
+          python3 scripts/check_secrets.py
+      - name: Verify empty motor, real browser, TLS and persistence
+        run: node scripts/verify.mjs
+      - name: Save synthetic catalog screenshots
+        if: success()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: integrated-catalog-layouts
+          path: artifacts/*.png
+          if-no-files-found: error
+          retention-days: 7
