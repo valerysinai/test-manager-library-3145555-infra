@@ -23,3 +23,12 @@ como pendiente: el agente no puede certificar que la usuaria la haya realizado.
 
 El CI debe fijar las revisiones efectivamente verificadas, y la evidencia distingue fuentes
 fusionadas, ramas de corrección y pruebas ejecutadas. El plazo original permanece intacto.
+
+## Preparación adicional antes de comprobar vencidos con datos
+
+Además del estado vacío, se probará la pantalla con un vencido real. Tras el recorrido normal,
+se recreará únicamente API del proyecto efímero en perfil demo/Septiembre, se creará por HTTPS
+un préstamo de una línea y se recreará API en Octubre, como C-04. Nuevo login, fila vencida,
+bloqueo visible de préstamo al mismo socio y devolución por UI. El stock vuelve a dos para
+conservar la comprobación de persistencia original. No se modifica el reloj del equipo ni el
+contrato. El reporte de este segundo recorrido tendrá archivo propio y ninguna credencial.
