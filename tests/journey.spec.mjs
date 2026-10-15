@@ -1,18 +1,27 @@
 import {test,expect} from '@playwright/test';
 import {mkdirSync,writeFileSync} from 'node:fs';
+import {screenAudit} from './screen-audit.mjs';
 
 const png=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO7+naEAAAAASUVORK5CYII=','base64');
 test('Real React Laravel PostgreSQL journey',async({page},info)=>{
   const stage=name=>info.annotations.push({type:'stage',description:name});
   const runtimeErrors=[];page.on('pageerror',()=>runtimeErrors.push(true));
+  const audit=screenAudit();
   const login=async(username,password)=>{await page.getByLabel('Usuario',{exact:true}).fill(username);await page.getByLabel('Contraseña',{exact:true}).fill(password);await page.getByRole('button',{name:'Entrar a la biblioteca'}).click();await expect(page.getByRole('heading',{name:'Catálogo de libros'})).toBeVisible();};
   stage('trusted-tls-login');
   const response=await page.goto('/');expect(response.ok()).toBe(true);expect((await response.securityDetails()).issuer).toBe('Manager Library Local CA');
+  await audit.capture(page,'login');
+  await page.getByLabel('Usuario',{exact:true}).fill('missing-fixture-user');await page.getByLabel('Contraseña',{exact:true}).fill('invalid-fixture-input');
+  await page.getByRole('button',{name:'Entrar a la biblioteca'}).click();await expect(page.getByRole('alert')).toBeVisible();
+  await page.getByLabel('Usuario',{exact:true}).clear();await page.getByLabel('Contraseña',{exact:true}).clear();
+  await audit.capture(page,'login-error');
   await login(process.env.ADMIN_USERNAME,process.env.ADMIN_PASSWORD);
+  await audit.keyboard(page);await expect(page.getByText('No se encontraron libros. Prueba otra búsqueda.')).toBeVisible();await audit.capture(page,'catalog-empty');
 
   stage('book-create');
   await page.getByRole('button',{name:'Nuevo libro',exact:true}).click();
   const create=page.locator('section.panel').filter({has:page.getByRole('heading',{name:'Nuevo libro',exact:true})});
+  await audit.capture(page,'book-create');
   const title='Lecturas de integración';
   await create.getByLabel('Título',{exact:true}).fill(title);await create.getByLabel('Autor',{exact:true}).fill('Autora de prueba');
   await create.getByLabel('ISBN (13 dígitos)').fill(String(Date.now()).slice(-13));
@@ -27,12 +36,19 @@ test('Real React Laravel PostgreSQL journey',async({page},info)=>{
   const uploaded=page.waitForResponse(r=>r.request().method()==='PUT'&&new URL(r.url()).pathname===`/api/v1/books/${book.id}/cover`);
   await page.getByRole('button',{name:'Guardar portada'}).click();expect((await uploaded).status()).toBe(200);
   await expect(page.getByAltText(`Portada de ${title}`)).toBeVisible();
+  await audit.capture(page,'book-detail');
+  await page.getByRole('button',{name:'Editar libro',exact:true}).click();await expect(page.getByRole('heading',{name:'Editar libro',exact:true})).toBeVisible();await audit.capture(page,'book-edit');
+  await page.getByRole('button',{name:'Cancelar',exact:true}).click();await expect(page.getByAltText(`Portada de ${title}`)).toBeVisible();
 
   stage('member-create');
   await page.getByRole('link',{name:'Socios',exact:true}).click();await page.getByRole('button',{name:'Nuevo socio'}).click();
+  await audit.capture(page,'member-create');
   await page.getByLabel('Nombre completo').fill('Socia de integración');await page.getByLabel('Documento',{exact:true}).fill('INTEGRATION-1');
   const memberCreated=page.waitForResponse(r=>r.request().method()==='POST'&&new URL(r.url()).pathname==='/api/v1/members');
   await page.getByRole('button',{name:'Guardar',exact:true}).click();const memberResponse=await memberCreated;expect(memberResponse.status()).toBe(201);const member=await memberResponse.json();
+  await expect(page.getByRole('button',{name:'Ver detalle'})).toBeVisible();await page.getByRole('button',{name:'Ver detalle'}).click();await expect(page.getByRole('heading',{name:'Detalle del socio'})).toBeVisible();await audit.capture(page,'member-detail');
+  await page.getByRole('button',{name:'Nuevo socio'}).click();await page.getByLabel('Nombre completo').fill('Duplicado de prueba');await page.getByLabel('Documento',{exact:true}).fill('INTEGRATION-1');
+  await page.getByRole('button',{name:'Guardar',exact:true}).click();await expect(page.getByRole('alert')).toBeVisible();await audit.capture(page,'member-duplicate');await page.getByRole('button',{name:'Nuevo socio'}).click();
 
   stage('loan-return');
   await page.getByRole('link',{name:'Préstamos',exact:true}).click();await page.getByRole('button',{name:'Nuevo préstamo'}).click();
@@ -41,10 +57,13 @@ test('Real React Laravel PostgreSQL journey',async({page},info)=>{
   await page.getByLabel('Buscar libro para prestar').fill('Lecturas de integración');
   const choice=page.getByRole('button',{name:/Lecturas de integración Autora de prueba/});await choice.click();await choice.click();
   await expect(page.getByText('1 de 3 libros seleccionados')).toBeVisible();
+  await audit.capture(page,'loan-create');
   const loanCreated=page.waitForResponse(r=>r.request().method()==='POST'&&new URL(r.url()).pathname==='/api/v1/loans');
   await page.getByRole('button',{name:'Confirmar préstamo'}).click();const loanResponse=await loanCreated;expect(loanResponse.status()).toBe(201);const loan=await loanResponse.json();
   await page.getByRole('button',{name:'Devolver ejemplar'}).click();await expect(page.getByRole('button',{name:'Devolver ejemplar'})).toHaveCount(0);
   await expect(page.getByText('Cerrado',{exact:true}).first()).toBeVisible();
+  await audit.capture(page,'loan-closed');
+  await page.getByRole('link',{name:'Vencidos',exact:true}).click();await expect(page.getByText('No hay libros vencidos.')).toBeVisible();await audit.capture(page,'overdue-empty');
 
   stage('report');
   await page.getByRole('link',{name:'Reporte',exact:true}).click();
@@ -60,13 +79,18 @@ test('Real React Laravel PostgreSQL journey',async({page},info)=>{
   console.log('::notice::Report row count: '+(Array.isArray(reportBody.rows)?reportBody.rows.length:0));
   expect(reportBody.rows.some(row=>row.book_title===title)).toBe(true);
   await expect(page.getByRole('cell',{name:title,exact:true})).toBeVisible();
+  await audit.capture(page,'report');
+  await page.getByLabel('Desde',{exact:true}).fill(to);await page.getByLabel('Hasta',{exact:true}).fill(from);await page.getByRole('button',{name:'Consultar reporte'}).click();await expect(page.getByRole('alert')).toBeVisible();await audit.capture(page,'report-invalid');
+  await page.getByLabel('Desde',{exact:true}).fill('1900-01-01');await page.getByLabel('Hasta',{exact:true}).fill('1900-01-02');await page.getByRole('button',{name:'Consultar reporte'}).click();await expect(page.getByText('No hay préstamos en este periodo.')).toBeVisible();await audit.capture(page,'report-empty');
 
   stage('librarian-account');
   await page.getByRole('link',{name:'Bibliotecarios',exact:true}).click();
+  await expect(page.getByRole('heading',{name:'Alta de bibliotecarios'})).toBeVisible();await audit.capture(page,'librarian-create');
   await page.getByLabel('Nombre de usuario').fill('integration-librarian');await page.getByLabel('Contraseña inicial').fill(process.env.TEST_PASSWORD);
   await page.getByRole('button',{name:'Crear cuenta'}).click();await expect(page.getByText('Cuenta creada: integration-librarian.')).toBeVisible();
   await page.getByRole('button',{name:'Cerrar sesión'}).click();await login('integration-librarian',process.env.TEST_PASSWORD);
   await expect(page.getByRole('link',{name:'Reporte',exact:true})).toHaveCount(0);await expect(page.getByRole('link',{name:'Bibliotecarios',exact:true})).toHaveCount(0);await expect(page.getByRole('button',{name:'Nuevo libro',exact:true})).toHaveCount(0);
+  await audit.keyboard(page);await audit.capture(page,'librarian-catalog');
 
   stage('desktop-mobile-layout');
   mkdirSync('artifacts',{recursive:true});
@@ -75,4 +99,5 @@ test('Real React Laravel PostgreSQL journey',async({page},info)=>{
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
   await page.screenshot({path:'artifacts/catalog-mobile.png',fullPage:true});expect(runtimeErrors.length).toBe(0);
   writeFileSync('artifacts/persistence.json',JSON.stringify({book_id:book.id,member_id:member.id,loan_id:loan.id,cover:png.toString('base64')}));
+  stage('screen-acceptance');audit.finish();
 });
