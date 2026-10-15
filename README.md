@@ -38,7 +38,19 @@ para llevarla a un stack distinto. El código es el medio, no el fin.
 Cuenta lo que quede **subido a los forks antes de las 11:00 a. m.** Lo que llegue después no se revisa.
 No hay prórroga: suban avances parciales con commits pequeños durante la prueba.
 
-## Los seis repositorios
+## Aceptación ampliada de presentación
+
+La [aceptación de pantallas y teclado](evidence/final-acceptance.md) amplía el recorrido T-22:
+21 estados en móvil/escritorio, contraste, controles identificados, menú/teclado, scroll de tablas,
+errores y vencidos reales. La corrección de colores está en la revisión App fijada en el workflow.
+Estos checks se ejecutan con `npm run verify` y conservan informes seguros en artifacts.
+
+El verificador comienza con perfil normal y usa después un reloj fijo solo en la API demo de
+su proyecto efímero, conforme a C-04, para comprobar vencidos/bloqueo/devolución. No cambia el
+reloj del equipo, el archivo .env ni el contrato. Limpia únicamente su proyecto generado.
+La demostración humana ante el evaluador permanece separada de esta aceptación automatizada.
+
+## Mapa de repositorios
 
 | Repositorio | Qué va ahí |
 |---|---|

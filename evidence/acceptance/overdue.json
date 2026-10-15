@@ -1,0 +1,97 @@
+{
+  "screens": [
+    {
+      "name": "overdue-populated",
+      "width": 390,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": [
+        {
+          "scroll_needed": true,
+          "scroll_reachable": true
+        }
+      ]
+    },
+    {
+      "name": "overdue-populated",
+      "width": 1440,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": [
+        {
+          "scroll_needed": false,
+          "scroll_reachable": true
+        }
+      ]
+    },
+    {
+      "name": "loan-overdue-blocked",
+      "width": 390,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": [
+        {
+          "scroll_needed": true,
+          "scroll_reachable": true
+        }
+      ]
+    },
+    {
+      "name": "loan-overdue-blocked",
+      "width": 1440,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": [
+        {
+          "scroll_needed": false,
+          "scroll_reachable": true
+        }
+      ]
+    },
+    {
+      "name": "overdue-returned",
+      "width": 390,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": [
+        {
+          "scroll_needed": true,
+          "scroll_reachable": true
+        },
+        {
+          "scroll_needed": true,
+          "scroll_reachable": true
+        }
+      ]
+    },
+    {
+      "name": "overdue-returned",
+      "width": 1440,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": [
+        {
+          "scroll_needed": false,
+          "scroll_reachable": true
+        },
+        {
+          "scroll_needed": false,
+          "scroll_reachable": true
+        }
+      ]
+    }
+  ],
+  "keyboard": true,
+  "complete": true,
+  "passed": true,
+  "keyboard_widths": [
+    390,
+    1440
+  ]
+}
