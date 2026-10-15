@@ -32,6 +32,7 @@ test('Real React Laravel PostgreSQL journey',async({page},info)=>{
   const bookResponse=await created;expect(bookResponse.status()).toBe(201);const book=await bookResponse.json();
   await page.getByRole('button').filter({has:page.getByRole('heading',{name:title,exact:true})}).click();
   stage('cover-upload');
+  await audit.capture(page,'book-no-cover');
   await page.getByLabel('Portada JPEG o PNG · máximo 2 MB').setInputFiles({name:'fixture.png',mimeType:'image/png',buffer:png});
   const uploaded=page.waitForResponse(r=>r.request().method()==='PUT'&&new URL(r.url()).pathname===`/api/v1/books/${book.id}/cover`);
   await page.getByRole('button',{name:'Guardar portada'}).click();expect((await uploaded).status()).toBe(200);

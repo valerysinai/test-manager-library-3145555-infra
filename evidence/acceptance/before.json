@@ -1,0 +1,2776 @@
+{
+  "screens": [
+    {
+      "name": "login",
+      "width": 390,
+      "horizontal_overflow": false,
+      "contrast": [
+        {
+          "selector": "p.eyebrow",
+          "foreground": "rgb(106, 130, 110)",
+          "background": [
+            250,
+            251,
+            247
+          ],
+          "ratio": 4.02,
+          "required": 4.5
+        },
+        {
+          "selector": "p.login-note",
+          "foreground": "rgb(124, 135, 123)",
+          "background": [
+            250,
+            251,
+            247
+          ],
+          "ratio": 3.6,
+          "required": 4.5
+        }
+      ],
+      "unnamed_controls": []
+    },
+    {
+      "name": "login",
+      "width": 1440,
+      "horizontal_overflow": false,
+      "contrast": [
+        {
+          "selector": "p.eyebrow",
+          "foreground": "rgb(106, 130, 110)",
+          "background": [
+            250,
+            251,
+            247
+          ],
+          "ratio": 4.02,
+          "required": 4.5
+        },
+        {
+          "selector": "p.login-note",
+          "foreground": "rgb(124, 135, 123)",
+          "background": [
+            250,
+            251,
+            247
+          ],
+          "ratio": 3.6,
+          "required": 4.5
+        }
+      ],
+      "unnamed_controls": []
+    },
+    {
+      "name": "login-error",
+      "width": 390,
+      "horizontal_overflow": false,
+      "contrast": [
+        {
+          "selector": "p.eyebrow",
+          "foreground": "rgb(106, 130, 110)",
+          "background": [
+            250,
+            251,
+            247
+          ],
+          "ratio": 4.02,
+          "required": 4.5
+        },
+        {
+          "selector": "p.login-note",
+          "foreground": "rgb(124, 135, 123)",
+          "background": [
+            250,
+            251,
+            247
+          ],
+          "ratio": 3.6,
+          "required": 4.5
+        }
+      ],
+      "unnamed_controls": []
+    },
+    {
+      "name": "login-error",
+      "width": 1440,
+      "horizontal_overflow": false,
+      "contrast": [
+        {
+          "selector": "p.eyebrow",
+          "foreground": "rgb(106, 130, 110)",
+          "background": [
+            250,
+            251,
+            247
+          ],
+          "ratio": 4.02,
+          "required": 4.5
+        },
+        {
+          "selector": "p.login-note",
+          "foreground": "rgb(124, 135, 123)",
+          "background": [
+            250,
+            251,
+            247
+          ],
+          "ratio": 3.6,
+          "required": 4.5
+        }
+      ],
+      "unnamed_controls": []
+    },
+    {
+      "name": "catalog-empty",
+      "width": 390,
+      "horizontal_overflow": false,
+      "contrast": [
+        {
+          "selector": "p.eyebrow",
+          "foreground": "rgb(106, 130, 110)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.91,
+          "required": 4.5
+        },
+        {
+          "selector": "p.muted",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "p.empty",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "footer.app-footer",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        }
+      ],
+      "unnamed_controls": []
+    },
+    {
+      "name": "catalog-empty",
+      "width": 1440,
+      "horizontal_overflow": false,
+      "contrast": [
+        {
+          "selector": "span.top-label",
+          "foreground": "rgb(119, 135, 119)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 3.81,
+          "required": 4.5
+        },
+        {
+          "selector": "p.eyebrow",
+          "foreground": "rgb(106, 130, 110)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.91,
+          "required": 4.5
+        },
+        {
+          "selector": "p.muted",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "p.empty",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "footer.app-footer",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        }
+      ],
+      "unnamed_controls": []
+    },
+    {
+      "name": "book-create",
+      "width": 390,
+      "horizontal_overflow": false,
+      "contrast": [
+        {
+          "selector": "p.eyebrow",
+          "foreground": "rgb(106, 130, 110)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.91,
+          "required": 4.5
+        },
+        {
+          "selector": "p.muted",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "p.empty",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "footer.app-footer",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        }
+      ],
+      "unnamed_controls": []
+    },
+    {
+      "name": "book-create",
+      "width": 1440,
+      "horizontal_overflow": false,
+      "contrast": [
+        {
+          "selector": "span.top-label",
+          "foreground": "rgb(119, 135, 119)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 3.81,
+          "required": 4.5
+        },
+        {
+          "selector": "p.eyebrow",
+          "foreground": "rgb(106, 130, 110)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.91,
+          "required": 4.5
+        },
+        {
+          "selector": "p.muted",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "p.empty",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "footer.app-footer",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        }
+      ],
+      "unnamed_controls": []
+    },
+    {
+      "name": "book-detail",
+      "width": 390,
+      "horizontal_overflow": false,
+      "contrast": [
+        {
+          "selector": "p.eyebrow",
+          "foreground": "rgb(106, 130, 110)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.91,
+          "required": 4.5
+        },
+        {
+          "selector": "p.muted",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "p.eyebrow",
+          "foreground": "rgb(106, 130, 110)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 4.17,
+          "required": 4.5
+        },
+        {
+          "selector": "footer.app-footer",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        }
+      ],
+      "unnamed_controls": []
+    },
+    {
+      "name": "book-detail",
+      "width": 1440,
+      "horizontal_overflow": false,
+      "contrast": [
+        {
+          "selector": "span.top-label",
+          "foreground": "rgb(119, 135, 119)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 3.81,
+          "required": 4.5
+        },
+        {
+          "selector": "p.eyebrow",
+          "foreground": "rgb(106, 130, 110)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.91,
+          "required": 4.5
+        },
+        {
+          "selector": "p.muted",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "p.eyebrow",
+          "foreground": "rgb(106, 130, 110)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 4.17,
+          "required": 4.5
+        },
+        {
+          "selector": "footer.app-footer",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        }
+      ],
+      "unnamed_controls": []
+    },
+    {
+      "name": "book-edit",
+      "width": 390,
+      "horizontal_overflow": false,
+      "contrast": [
+        {
+          "selector": "span",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "footer.app-footer",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        }
+      ],
+      "unnamed_controls": []
+    },
+    {
+      "name": "book-edit",
+      "width": 1440,
+      "horizontal_overflow": false,
+      "contrast": [
+        {
+          "selector": "span",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "footer.app-footer",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        }
+      ],
+      "unnamed_controls": []
+    },
+    {
+      "name": "member-create",
+      "width": 390,
+      "horizontal_overflow": false,
+      "contrast": [
+        {
+          "selector": "p.eyebrow",
+          "foreground": "rgb(106, 130, 110)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.91,
+          "required": 4.5
+        },
+        {
+          "selector": "p.muted",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "p.empty",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "footer.app-footer",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        }
+      ],
+      "unnamed_controls": []
+    },
+    {
+      "name": "member-create",
+      "width": 1440,
+      "horizontal_overflow": false,
+      "contrast": [
+        {
+          "selector": "span.top-label",
+          "foreground": "rgb(119, 135, 119)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 3.81,
+          "required": 4.5
+        },
+        {
+          "selector": "p.eyebrow",
+          "foreground": "rgb(106, 130, 110)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.91,
+          "required": 4.5
+        },
+        {
+          "selector": "p.muted",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "p.empty",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "footer.app-footer",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        }
+      ],
+      "unnamed_controls": []
+    },
+    {
+      "name": "member-detail",
+      "width": 390,
+      "horizontal_overflow": false,
+      "contrast": [
+        {
+          "selector": "p.eyebrow",
+          "foreground": "rgb(106, 130, 110)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.91,
+          "required": 4.5
+        },
+        {
+          "selector": "p.muted",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "footer.app-footer",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        }
+      ],
+      "unnamed_controls": []
+    },
+    {
+      "name": "member-detail",
+      "width": 1440,
+      "horizontal_overflow": false,
+      "contrast": [
+        {
+          "selector": "span.top-label",
+          "foreground": "rgb(119, 135, 119)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 3.81,
+          "required": 4.5
+        },
+        {
+          "selector": "p.eyebrow",
+          "foreground": "rgb(106, 130, 110)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.91,
+          "required": 4.5
+        },
+        {
+          "selector": "p.muted",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "footer.app-footer",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        }
+      ],
+      "unnamed_controls": []
+    },
+    {
+      "name": "member-duplicate",
+      "width": 390,
+      "horizontal_overflow": false,
+      "contrast": [
+        {
+          "selector": "p.eyebrow",
+          "foreground": "rgb(106, 130, 110)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.91,
+          "required": 4.5
+        },
+        {
+          "selector": "p.muted",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "footer.app-footer",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        }
+      ],
+      "unnamed_controls": []
+    },
+    {
+      "name": "member-duplicate",
+      "width": 1440,
+      "horizontal_overflow": false,
+      "contrast": [
+        {
+          "selector": "span.top-label",
+          "foreground": "rgb(119, 135, 119)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 3.81,
+          "required": 4.5
+        },
+        {
+          "selector": "p.eyebrow",
+          "foreground": "rgb(106, 130, 110)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.91,
+          "required": 4.5
+        },
+        {
+          "selector": "p.muted",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "footer.app-footer",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        }
+      ],
+      "unnamed_controls": []
+    },
+    {
+      "name": "loan-create",
+      "width": 390,
+      "horizontal_overflow": false,
+      "contrast": [
+        {
+          "selector": "p.eyebrow",
+          "foreground": "rgb(106, 130, 110)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.91,
+          "required": 4.5
+        },
+        {
+          "selector": "p.muted",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "small",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            237,
+            242,
+            233
+          ],
+          "ratio": 4.13,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "p.empty",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "footer.app-footer",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        }
+      ],
+      "unnamed_controls": []
+    },
+    {
+      "name": "loan-create",
+      "width": 1440,
+      "horizontal_overflow": false,
+      "contrast": [
+        {
+          "selector": "span.top-label",
+          "foreground": "rgb(119, 135, 119)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 3.81,
+          "required": 4.5
+        },
+        {
+          "selector": "p.eyebrow",
+          "foreground": "rgb(106, 130, 110)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.91,
+          "required": 4.5
+        },
+        {
+          "selector": "p.muted",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "small",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            237,
+            242,
+            233
+          ],
+          "ratio": 4.13,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "p.empty",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "footer.app-footer",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        }
+      ],
+      "unnamed_controls": []
+    },
+    {
+      "name": "loan-closed",
+      "width": 390,
+      "horizontal_overflow": false,
+      "contrast": [
+        {
+          "selector": "p.eyebrow",
+          "foreground": "rgb(106, 130, 110)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.91,
+          "required": 4.5
+        },
+        {
+          "selector": "p.muted",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "span.badge.closed",
+          "foreground": "rgb(111, 118, 109)",
+          "background": [
+            240,
+            240,
+            233
+          ],
+          "ratio": 4.09,
+          "required": 4.5
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "footer.app-footer",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        }
+      ],
+      "unnamed_controls": []
+    },
+    {
+      "name": "loan-closed",
+      "width": 1440,
+      "horizontal_overflow": false,
+      "contrast": [
+        {
+          "selector": "span.top-label",
+          "foreground": "rgb(119, 135, 119)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 3.81,
+          "required": 4.5
+        },
+        {
+          "selector": "p.eyebrow",
+          "foreground": "rgb(106, 130, 110)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.91,
+          "required": 4.5
+        },
+        {
+          "selector": "p.muted",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "span.badge.closed",
+          "foreground": "rgb(111, 118, 109)",
+          "background": [
+            240,
+            240,
+            233
+          ],
+          "ratio": 4.09,
+          "required": 4.5
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "footer.app-footer",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        }
+      ],
+      "unnamed_controls": []
+    },
+    {
+      "name": "overdue-empty",
+      "width": 390,
+      "horizontal_overflow": false,
+      "contrast": [
+        {
+          "selector": "p.eyebrow",
+          "foreground": "rgb(106, 130, 110)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.91,
+          "required": 4.5
+        },
+        {
+          "selector": "p.muted",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "p.empty",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "footer.app-footer",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        }
+      ],
+      "unnamed_controls": []
+    },
+    {
+      "name": "overdue-empty",
+      "width": 1440,
+      "horizontal_overflow": false,
+      "contrast": [
+        {
+          "selector": "span.top-label",
+          "foreground": "rgb(119, 135, 119)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 3.81,
+          "required": 4.5
+        },
+        {
+          "selector": "p.eyebrow",
+          "foreground": "rgb(106, 130, 110)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.91,
+          "required": 4.5
+        },
+        {
+          "selector": "p.muted",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "p.empty",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "footer.app-footer",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        }
+      ],
+      "unnamed_controls": []
+    },
+    {
+      "name": "report",
+      "width": 390,
+      "horizontal_overflow": false,
+      "contrast": [
+        {
+          "selector": "p.eyebrow",
+          "foreground": "rgb(106, 130, 110)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.91,
+          "required": 4.5
+        },
+        {
+          "selector": "p.muted",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "footer.app-footer",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        }
+      ],
+      "unnamed_controls": []
+    },
+    {
+      "name": "report",
+      "width": 1440,
+      "horizontal_overflow": false,
+      "contrast": [
+        {
+          "selector": "span.top-label",
+          "foreground": "rgb(119, 135, 119)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 3.81,
+          "required": 4.5
+        },
+        {
+          "selector": "p.eyebrow",
+          "foreground": "rgb(106, 130, 110)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.91,
+          "required": 4.5
+        },
+        {
+          "selector": "p.muted",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "footer.app-footer",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        }
+      ],
+      "unnamed_controls": []
+    },
+    {
+      "name": "report-invalid",
+      "width": 390,
+      "horizontal_overflow": false,
+      "contrast": [
+        {
+          "selector": "p.eyebrow",
+          "foreground": "rgb(106, 130, 110)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.91,
+          "required": 4.5
+        },
+        {
+          "selector": "p.muted",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "footer.app-footer",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        }
+      ],
+      "unnamed_controls": []
+    },
+    {
+      "name": "report-invalid",
+      "width": 1440,
+      "horizontal_overflow": false,
+      "contrast": [
+        {
+          "selector": "span.top-label",
+          "foreground": "rgb(119, 135, 119)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 3.81,
+          "required": 4.5
+        },
+        {
+          "selector": "p.eyebrow",
+          "foreground": "rgb(106, 130, 110)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.91,
+          "required": 4.5
+        },
+        {
+          "selector": "p.muted",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "footer.app-footer",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        }
+      ],
+      "unnamed_controls": []
+    },
+    {
+      "name": "report-empty",
+      "width": 390,
+      "horizontal_overflow": false,
+      "contrast": [
+        {
+          "selector": "p.eyebrow",
+          "foreground": "rgb(106, 130, 110)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.91,
+          "required": 4.5
+        },
+        {
+          "selector": "p.muted",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "p.empty",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "footer.app-footer",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        }
+      ],
+      "unnamed_controls": []
+    },
+    {
+      "name": "report-empty",
+      "width": 1440,
+      "horizontal_overflow": false,
+      "contrast": [
+        {
+          "selector": "span.top-label",
+          "foreground": "rgb(119, 135, 119)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 3.81,
+          "required": 4.5
+        },
+        {
+          "selector": "p.eyebrow",
+          "foreground": "rgb(106, 130, 110)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.91,
+          "required": 4.5
+        },
+        {
+          "selector": "p.muted",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "th",
+          "foreground": "rgb(113, 128, 113)",
+          "background": [
+            243,
+            245,
+            239
+          ],
+          "ratio": 3.8,
+          "required": 4.5
+        },
+        {
+          "selector": "p.empty",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "footer.app-footer",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        }
+      ],
+      "unnamed_controls": []
+    },
+    {
+      "name": "librarian-create",
+      "width": 390,
+      "horizontal_overflow": false,
+      "contrast": [
+        {
+          "selector": "p.eyebrow",
+          "foreground": "rgb(106, 130, 110)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.91,
+          "required": 4.5
+        },
+        {
+          "selector": "footer.app-footer",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        }
+      ],
+      "unnamed_controls": []
+    },
+    {
+      "name": "librarian-create",
+      "width": 1440,
+      "horizontal_overflow": false,
+      "contrast": [
+        {
+          "selector": "span.top-label",
+          "foreground": "rgb(119, 135, 119)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 3.81,
+          "required": 4.5
+        },
+        {
+          "selector": "p.eyebrow",
+          "foreground": "rgb(106, 130, 110)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.91,
+          "required": 4.5
+        },
+        {
+          "selector": "footer.app-footer",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        }
+      ],
+      "unnamed_controls": []
+    },
+    {
+      "name": "librarian-catalog",
+      "width": 390,
+      "horizontal_overflow": false,
+      "contrast": [
+        {
+          "selector": "p.eyebrow",
+          "foreground": "rgb(106, 130, 110)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.91,
+          "required": 4.5
+        },
+        {
+          "selector": "p.muted",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "footer.app-footer",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        }
+      ],
+      "unnamed_controls": []
+    },
+    {
+      "name": "librarian-catalog",
+      "width": 1440,
+      "horizontal_overflow": false,
+      "contrast": [
+        {
+          "selector": "span.top-label",
+          "foreground": "rgb(119, 135, 119)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 3.81,
+          "required": 4.5
+        },
+        {
+          "selector": "p.eyebrow",
+          "foreground": "rgb(106, 130, 110)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.91,
+          "required": 4.5
+        },
+        {
+          "selector": "p.muted",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(105, 119, 111)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 4.41,
+          "required": 4.5
+        },
+        {
+          "selector": "footer.app-footer",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        },
+        {
+          "selector": "span",
+          "foreground": "rgb(125, 138, 119)",
+          "background": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 3.41,
+          "required": 4.5
+        }
+      ],
+      "unnamed_controls": []
+    }
+  ],
+  "keyboard": true,
+  "complete": true,
+  "passed": false
+}

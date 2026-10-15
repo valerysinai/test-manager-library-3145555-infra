@@ -30,7 +30,7 @@ jobs:
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           repository: valerysinai/test-manager-library-3145555-app
-          ref: b5ef195119bd1f21111bc003fd1970192ccdbf89
+          ref: a9b74f90d6d1e6152bbd2d421a1143fe914ea1e7
           path: _sources/app
           persist-credentials: false
       - name: Generate disposable configuration and local CA
@@ -63,5 +63,6 @@ jobs:
           path: |
             artifacts/*.png
             artifacts/acceptance-summary.json
+            artifacts/overdue-summary.json
           if-no-files-found: ignore
           retention-days: 7
