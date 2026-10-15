@@ -85,12 +85,12 @@ test('Real React Laravel PostgreSQL journey',async({page},info)=>{
 
   stage('librarian-account');
   await page.getByRole('link',{name:'Bibliotecarios',exact:true}).click();
-  await expect(page.getByRole('heading',{name:'Alta de bibliotecarios'})).toBeVisible();await audit.capture(page,'librarian-create');
+  await expect(page.getByRole('heading',{name:'Bibliotecarios',exact:true})).toBeVisible();await audit.capture(page,'librarian-create');
   await page.getByLabel('Nombre de usuario').fill('integration-librarian');await page.getByLabel('Contraseña inicial').fill(process.env.TEST_PASSWORD);
   await page.getByRole('button',{name:'Crear cuenta'}).click();await expect(page.getByText('Cuenta creada: integration-librarian.')).toBeVisible();
   await page.getByRole('button',{name:'Cerrar sesión'}).click();await login('integration-librarian',process.env.TEST_PASSWORD);
   await expect(page.getByRole('link',{name:'Reporte',exact:true})).toHaveCount(0);await expect(page.getByRole('link',{name:'Bibliotecarios',exact:true})).toHaveCount(0);await expect(page.getByRole('button',{name:'Nuevo libro',exact:true})).toHaveCount(0);
-  await audit.keyboard(page);await audit.capture(page,'librarian-catalog');
+  await audit.keyboard(page);await expect(page.getByRole('heading',{name:title,exact:true})).toBeVisible();await audit.capture(page,'librarian-catalog');
 
   stage('desktop-mobile-layout');
   mkdirSync('artifacts',{recursive:true});
