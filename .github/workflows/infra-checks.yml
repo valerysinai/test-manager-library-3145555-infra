@@ -23,14 +23,14 @@ jobs:
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           repository: valerysinai/test-manager-library-3145555-api
-          ref: 590a012d533bdaec1df10ea41bdc600b58860d55
+          ref: 60bbcdd8c45637d426455d4e24b028ea1af76157
           path: _sources/api
           persist-credentials: false
       - name: Read pinned React source
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           repository: valerysinai/test-manager-library-3145555-app
-          ref: 47a517d0ebce8526d96e650d1ac9750338dcc8a4
+          ref: a9b74f90d6d1e6152bbd2d421a1143fe914ea1e7
           path: _sources/app
           persist-credentials: false
       - name: Generate disposable configuration and local CA
@@ -55,11 +55,14 @@ jobs:
           python3 scripts/check_secrets.py
       - name: Verify empty motor, real browser, TLS and persistence
         run: node scripts/verify.mjs
-      - name: Save synthetic catalog screenshots
-        if: success()
+      - name: Save safe screen acceptance results
+        if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: integrated-catalog-layouts
-          path: artifacts/*.png
-          if-no-files-found: error
+          path: |
+            artifacts/*.png
+            artifacts/acceptance-summary.json
+            artifacts/overdue-summary.json
+          if-no-files-found: ignore
           retention-days: 7

@@ -1,0 +1,387 @@
+{
+  "screens": [
+    {
+      "name": "login",
+      "width": 390,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": []
+    },
+    {
+      "name": "login",
+      "width": 1440,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": []
+    },
+    {
+      "name": "login-error",
+      "width": 390,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": []
+    },
+    {
+      "name": "login-error",
+      "width": 1440,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": []
+    },
+    {
+      "name": "catalog-empty",
+      "width": 390,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": []
+    },
+    {
+      "name": "catalog-empty",
+      "width": 1440,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": []
+    },
+    {
+      "name": "book-create",
+      "width": 390,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": []
+    },
+    {
+      "name": "book-create",
+      "width": 1440,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": []
+    },
+    {
+      "name": "book-no-cover",
+      "width": 390,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": []
+    },
+    {
+      "name": "book-no-cover",
+      "width": 1440,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": []
+    },
+    {
+      "name": "book-detail",
+      "width": 390,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": []
+    },
+    {
+      "name": "book-detail",
+      "width": 1440,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": []
+    },
+    {
+      "name": "book-edit",
+      "width": 390,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": []
+    },
+    {
+      "name": "book-edit",
+      "width": 1440,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": []
+    },
+    {
+      "name": "member-create",
+      "width": 390,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": [
+        {
+          "scroll_needed": false,
+          "scroll_reachable": true
+        }
+      ]
+    },
+    {
+      "name": "member-create",
+      "width": 1440,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": [
+        {
+          "scroll_needed": false,
+          "scroll_reachable": true
+        }
+      ]
+    },
+    {
+      "name": "member-detail",
+      "width": 390,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": [
+        {
+          "scroll_needed": true,
+          "scroll_reachable": true
+        }
+      ]
+    },
+    {
+      "name": "member-detail",
+      "width": 1440,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": [
+        {
+          "scroll_needed": false,
+          "scroll_reachable": true
+        }
+      ]
+    },
+    {
+      "name": "member-duplicate",
+      "width": 390,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": [
+        {
+          "scroll_needed": true,
+          "scroll_reachable": true
+        }
+      ]
+    },
+    {
+      "name": "member-duplicate",
+      "width": 1440,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": [
+        {
+          "scroll_needed": false,
+          "scroll_reachable": true
+        }
+      ]
+    },
+    {
+      "name": "loan-create",
+      "width": 390,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": [
+        {
+          "scroll_needed": true,
+          "scroll_reachable": true
+        }
+      ]
+    },
+    {
+      "name": "loan-create",
+      "width": 1440,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": [
+        {
+          "scroll_needed": false,
+          "scroll_reachable": true
+        }
+      ]
+    },
+    {
+      "name": "loan-closed",
+      "width": 390,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": [
+        {
+          "scroll_needed": true,
+          "scroll_reachable": true
+        },
+        {
+          "scroll_needed": true,
+          "scroll_reachable": true
+        }
+      ]
+    },
+    {
+      "name": "loan-closed",
+      "width": 1440,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": [
+        {
+          "scroll_needed": false,
+          "scroll_reachable": true
+        },
+        {
+          "scroll_needed": false,
+          "scroll_reachable": true
+        }
+      ]
+    },
+    {
+      "name": "overdue-empty",
+      "width": 390,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": [
+        {
+          "scroll_needed": true,
+          "scroll_reachable": true
+        }
+      ]
+    },
+    {
+      "name": "overdue-empty",
+      "width": 1440,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": [
+        {
+          "scroll_needed": false,
+          "scroll_reachable": true
+        }
+      ]
+    },
+    {
+      "name": "report",
+      "width": 390,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": [
+        {
+          "scroll_needed": false,
+          "scroll_reachable": true
+        }
+      ]
+    },
+    {
+      "name": "report",
+      "width": 1440,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": [
+        {
+          "scroll_needed": false,
+          "scroll_reachable": true
+        }
+      ]
+    },
+    {
+      "name": "report-invalid",
+      "width": 390,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": []
+    },
+    {
+      "name": "report-invalid",
+      "width": 1440,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": []
+    },
+    {
+      "name": "report-empty",
+      "width": 390,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": [
+        {
+          "scroll_needed": false,
+          "scroll_reachable": true
+        }
+      ]
+    },
+    {
+      "name": "report-empty",
+      "width": 1440,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": [
+        {
+          "scroll_needed": false,
+          "scroll_reachable": true
+        }
+      ]
+    },
+    {
+      "name": "librarian-create",
+      "width": 390,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": []
+    },
+    {
+      "name": "librarian-create",
+      "width": 1440,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": []
+    },
+    {
+      "name": "librarian-catalog",
+      "width": 390,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": []
+    },
+    {
+      "name": "librarian-catalog",
+      "width": 1440,
+      "horizontal_overflow": false,
+      "contrast": [],
+      "unnamed_controls": [],
+      "tables": []
+    }
+  ],
+  "keyboard": true,
+  "complete": true,
+  "passed": true,
+  "keyboard_widths": [
+    390,
+    1440
+  ]
+}

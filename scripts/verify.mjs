@@ -31,6 +31,8 @@ function http(path,body,token,trust=true){return new Promise((ok,fail)=>{
   req.on('error',()=>fail(new Error()));req.on('timeout',()=>req.destroy(new Error()));if(bytes)req.write(bytes);req.end();
 });}
 async function login(){const response=await http('/api/v1/auth/login',{username:env.ADMIN_USERNAME,password:env.ADMIN_PASSWORD});assert.equal(response.status,200);return JSON.parse(response.bytes).access_token;}
+async function waitForApi(){for(let attempt=0;attempt<30;attempt++){try{if((await http('/api/v1/health')).status===200)return;}catch{}await new Promise(resolve=>setTimeout(resolve,1000));}throw new Error();}
+function browserCheck(){const output=docker([...compose,'-f','compose.yaml','-f','compose.test.yaml','--profile','verify','run','--build','--rm','--no-deps','browser']);for(const line of output.split('\n').filter(l=>l.startsWith('Integrated browser check')||/^::notice::Report (HTTP status|row count): [0-9]+$/.test(l)))console.log(line);}
 function sql(statement){return docker([...compose,'exec','-T','db','psql','-v','ON_ERROR_STOP=1','-U',env.DB_USERNAME||'library','-d',env.DB_DATABASE||'library','-tAc',statement]).trim();}
 try {
   console.log('Verifying isolated deployment project: '+project);
@@ -45,9 +47,14 @@ try {
   assert.equal((await http('/api/v1/health')).status,200);const token=await login();assert.equal((await http('/api/v1/categories',undefined,token)).status,200);
   assert.equal((await http('/')).status,200);
   stage='integrated-browser';
-  const output=docker(['compose','--project-name',project,'-f','compose.yaml','-f','compose.test.yaml','--profile','verify','run','--build','--rm','--no-deps','browser']);
-  for(const line of output.split('\n').filter(l=>l.startsWith('Integrated browser check')||/^::notice::Report (HTTP status|row count): [0-9]+$/.test(l)))console.log(line);
+  browserCheck();
   const state=JSON.parse(readFileSync('artifacts/persistence.json','utf8'));
+  stage='overdue-early-clock';env.APP_ENV='demo';env.CLOCK_MODE='fixed';env.CLOCK_FIXED_AT='2026-09-29T14:15:00Z';
+  docker([...compose,'up','-d','--no-deps','--force-recreate','--wait','api']);await waitForApi();
+  const early=await login();const seeded=await http('/api/v1/loans',{member_id:state.member_id,items:[{book_id:state.book_id}]},early);assert.equal(seeded.status,201);
+  stage='overdue-current-clock';env.CLOCK_FIXED_AT='2026-10-14T14:15:00Z';docker([...compose,'up','-d','--no-deps','--force-recreate','--wait','api']);await waitForApi();
+  assert.equal((await http('/api/v1/books',undefined,early)).status,401);
+  stage='overdue-browser';env.BROWSER_TEST_MATCH='overdue';browserCheck();
   stage='persistent-stop';docker([...compose,'down']);
   stage='persistent-start';docker([...compose,'up','-d','--wait','--wait-timeout','180']);
   stage='persisted-login';

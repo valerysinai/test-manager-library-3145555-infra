@@ -8,6 +8,7 @@ services:
       ADMIN_USERNAME: ${ADMIN_USERNAME}
       ADMIN_PASSWORD: ${ADMIN_PASSWORD}
       TEST_PASSWORD: ${TEST_PASSWORD:?Test credentials required only for verification}
+      BROWSER_TEST_MATCH: ${BROWSER_TEST_MATCH:-journey}
     volumes:
       - ${TLS_DIR:-./.local/tls}/root-ca.pem:/trust/root-ca.pem:ro
       - ./artifacts:/work/artifacts
